@@ -158,6 +158,19 @@ h1 {
 
 .action.primary { background: var(--orange); }
 
+.action {
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 8px;
+}
+
+.action-icon {
+  width: 1.35em;
+  height: 1.35em;
+  fill: currentColor;
+  flex: none;
+}
+
 .share {
   width: 100%;
   margin-top: 12px;
@@ -174,6 +187,7 @@ h1 {
 
 @media (max-width: 480px) {
   .page { box-shadow: none; }
+  h1 { margin-top: 12px; }
   .actions { grid-template-columns: 1fr; }
   .story { padding-inline: 20px; }
 }
