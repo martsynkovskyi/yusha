@@ -33,6 +33,41 @@ body {
   background: var(--orange);
 }
 
+.language-switch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 44px);
+  margin-top: 14px;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 42%);
+}
+
+.language-switch button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+  font-size: .83rem;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: white;
+  background: var(--ink);
+}
+
+.language-switch button:focus-visible,
+.action:focus-visible,
+.share:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
 .eyebrow {
   margin: 0;
   font-size: clamp(1.1rem, 5vw, 1.65rem);
@@ -84,6 +119,54 @@ h1 {
   font-weight: 800;
   text-transform: uppercase;
 }
+
+.update {
+  margin: 24px 20px 0;
+  padding: 23px 22px 22px;
+  border: 2px solid var(--ink);
+  border-top: 8px solid var(--orange);
+  background: white;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.update-kicker {
+  display: inline-block;
+  margin: 0 0 9px !important;
+  padding: 5px 9px;
+  color: var(--ink);
+  background: var(--orange);
+  font-size: .82rem !important;
+  font-weight: 1000;
+  letter-spacing: .06em;
+}
+
+.update h2 {
+  margin: 0 0 14px;
+  font-size: 1.55rem;
+}
+
+.update p {
+  margin: 0 0 13px;
+  font-size: 1.05rem;
+}
+
+.update-appeal { font-weight: 850; }
+
+.identity {
+  display: grid;
+  gap: 3px;
+  margin-top: 18px;
+  padding: 14px 15px;
+  background: #f1ede7;
+}
+
+.identity strong {
+  font-size: .82rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.identity span { font-size: .98rem; }
 
 .story { padding: 30px 25px 25px; }
 
@@ -185,10 +268,21 @@ h1 {
   font-size: .9rem;
 }
 
+.updated {
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
 @media (max-width: 480px) {
   .page { box-shadow: none; }
   .actions { grid-template-columns: 1fr; }
   .story { padding-inline: 20px; }
+  .update {
+    margin-inline: 14px;
+    padding-inline: 18px;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
