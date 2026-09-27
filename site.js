@@ -25,7 +25,7 @@ const translations = {
     documentTitle: 'Юша найден',
     languageSwitchLabel: 'Выбор языка',
     eyebrow: 'НАЙДЕН',
-    name: 'ЮШУ',
+    name: 'ЮША',
     heroLine: 'Спасибо всем за помощь',
     portraitAlt: 'Юша, крупный серебристо-серый длинношерстный кот',
     lastSeenLabel: 'Обновление',
